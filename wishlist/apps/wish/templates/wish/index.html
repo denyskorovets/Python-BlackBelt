@@ -84,7 +84,7 @@
                     <label for="name_up">Name:
                         {% if messages %}
                             {% for message in messages %}
-                                {% if message.extra_tags == 'name_up' %}
+                                {% if message.extra_tags == 'name' %}
                                     {{ message }}
                                 {% endif %}
                             {% endfor %}
@@ -107,6 +107,21 @@
                     </label>
                     <div class="input">
                         <input id="username_up" name="username_up" size="30" type="text" class='xlarge'/>
+                    </div>
+                </div>
+
+                <div class="clearfix">
+                    <label for="email_up">Email:
+                        {% if messages %}
+                            {% for message in messages %}
+                                {% if message.extra_tags == 'email' %}
+                                    {{ message }}
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </label>
+                    <div class="input">
+                        <input id="email_up" name="email_up" size="30" type="text" class='xlarge'/>
                     </div>
                 </div>
 
@@ -167,17 +182,17 @@
                 <div class="clearfix">
                     <div class="clearfix">
 
-                        <label for="username_in">Username:
+                        <label for="email_in">Email:
                             {% if messages %}
                                 {% for message in messages %}
-                                    {% if message.extra_tags == 'username_in' %}
+                                    {% if message.extra_tags == 'email_in' %}
                                         {{ message }}
                                     {% endif %}
                                 {% endfor %}
                             {% endif %}
                         </label>
                         <div class="input">
-                            <input id="username_in" name="username_in" size="30" type="text"/>
+                            <input id="email_in" name="email_in" size="30" type="text"/>
                         </div>
                     </div>
 
